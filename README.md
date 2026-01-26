@@ -28,9 +28,9 @@ Checking in the oeis.org database we can find that for this sequence G(n+2) = 4*
 which can also be proven directly:
 
 G(n) = F(m)
-G(n+1) = F(m+3) = F(m+1) + F(m+2) = F(m+1) + F(m) + F(m+1) = G(n) + 2*F(m+1)
-G(n+2) = F(m+6) = G(n+1) + 2*F(m+4) = G(n+1) + 2*(F(m+3) + F(m+2)) = G(n+1) + 2*(G(n+1) + F(m+1) + F(m)) 
-= 3*G(n+1) + 2*(F(m+1) + G(n)) = 3*G(n+1) + 2*G(n) + 2*(G(n+1) - G(n))/2 = 4*G(n+1) + G(n)
+G(n+1) = F(m+3) = F(m+1) + F(m+2) = F(m+1) + F(m) + F(m+1) = G(n) + 2* F(m+1)
+G(n+2) = F(m+6) = G(n+1) + 2 * F(m+4) = G(n+1) + 2* (F(m+3) + F(m+2)) = G(n+1) + 2 * (G(n+1) + F(m+1) + F(m)) 
+= 3 * G(n+1) + 2 * (F(m+1) + G(n)) = 3 * G(n+1) + 2 * G(n) + 2*(G(n+1) - G(n))/2 = 4 * G(n+1) + G(n)
 
 Now, the sum of this sequence is another sequence, which can also be found at oeis.org:
 
@@ -42,7 +42,9 @@ Indeed, it is true for 2 = (8 + 2 - 2)/4.
 
 Assume S(n) = (G(n+1) + G(n) - 2)/4, then 
 
-S(n+1) = S(n) + G(n+1) = G(n+1) + (G(n+1) + G(n) - 2)/4 = (G(n+1) + 4*G(n+1) + G(n) - 2)/4 = (G(n+2) + G(n+1) - 2)/4
+S(n+1) = S(n) + G(n+1) = G(n+1) + (G(n+1) + G(n) - 2)/4 = (G(n+1) + 4*G(n+1) + G(n) - 2)/4 
+
+= (G(n+2) + G(n+1) - 2)/4
 
 QED
 
