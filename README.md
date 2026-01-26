@@ -16,4 +16,52 @@ Please note: Project Euler's policy allows publication of solutions for the firs
 that's why I am sharing my work here for reference and educational purposes.
 #######################################################################################
 
+Brute force approach is straightforward: calculate Fibonacci sequence from its definition, check its terms for evenness, collect the sum of the even ones.
+
+But to improve on this, first, we notice, that due to the properties of the Fibonacci exactly every 3d term is even, so we need to explore the new sequence:
+
+0, 2, 8, 34, 144...
+
+Checking in the oeis.org database we can find that for this sequence G(n+2) = 4*G(n+1) + G(n),
+which can also be proven directly:
+
+G(n) = F(m)
+G(n+1) = F(m+3) = F(m+1) + F(m+2) = F(m+1) + F(m) + F(m+1) = G(n) + 2*F(m+1)
+G(n+2) = F(m+6) = G(n+1) + 2*F(m+4) = G(n+1) + 2*(F(m+3) + F(m+2)) = G(n+1) + 2*(G(n+1) + F(m+1) + F(m)) 
+= 3*G(n+1) + 2*(F(m+1) + G(n)) = 3*G(n+1) + 2*G(n) + 2*(G(n+1) - G(n))/2 = 4*G(n+1) + G(n)
+
+Now, the sum of this sequence is another sequence, which can also be found at oeis.org:
+
+0, 2, 10, 44, 188, 798, ...
+
+and its general formula is S(n) = (G(n+1) + G(n) - 2)/4, which can be proven by induction.
+
+Indeed, it is true for 2 = (8 + 2 - 2)/4.
+
+Assume S(n) = (G(n+1) + G(n) - 2)/4, then 
+
+S(n+1) = S(n) + G(n+1) = G(n+1) + (G(n+1) + G(n) - 2)/4 = (G(n+1) + 4*G(n+1) + G(n) - 2)/4 = (G(n+2) + G(n+1) - 2)/4
+
+QED
+
+Now we just need to calculate the sequence of G(n) until we reach the limit, and use its last two terms to calculate the sum.
+
+As we can see, this cuts the calculation time in half.
+
+Java code just implements the the faster approach. Python explores both and shows the computation time for them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
