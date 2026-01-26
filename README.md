@@ -32,7 +32,7 @@ G(n+1) = F(m+3) = F(m+1) + F(m+2) = F(m+1) + F(m) + F(m+1) = G(n) + 2* F(m+1)
 G(n+2) = F(m+6) = G(n+1) + 2 * F(m+4) = G(n+1) + 2 * (F(m+3) + F(m+2)) = G(n+1) + 2 * (G(n+1) + F(m+1) + F(m)) 
 = 3 * G(n+1) + 2 * (F(m+1) + G(n)) = 3 * G(n+1) + 2 * G(n) + 2 * (G(n+1) - G(n))/2 
 
-= 4 * G(n+1) + G(n) QED
+= 4 * G(n+1) + G(n)   :QED
 
 Now, the sum of this sequence is another sequence, which can also be found at oeis.org:
 
@@ -46,7 +46,7 @@ Assume S(n) = (G(n+1) + G(n) - 2)/4, then
 
 S(n+1) = S(n) + G(n+1) = G(n+1) + (G(n+1) + G(n) - 2)/4 = (G(n+1) + 4*G(n+1) + G(n) - 2)/4 
 
-= (G(n+2) + G(n+1) - 2)/4 QED
+= (G(n+2) + G(n+1) - 2)/4   :QED
 
 Now we just need to calculate the sequence of G(n) until we reach the limit, and use its last two terms to calculate the sum.
 
