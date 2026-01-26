@@ -30,9 +30,9 @@ which can also be proven directly:
 G(n) = F(m)
 G(n+1) = F(m+3) = F(m+1) + F(m+2) = F(m+1) + F(m) + F(m+1) = G(n) + 2* F(m+1)
 G(n+2) = F(m+6) = G(n+1) + 2 * F(m+4) = G(n+1) + 2 * (F(m+3) + F(m+2)) = G(n+1) + 2 * (G(n+1) + F(m+1) + F(m)) 
-= 3 * G(n+1) + 2 * (F(m+1) + G(n)) = 3 * G(n+1) + 2 * G(n) + 2 * (G(n+1) - G(n))/2 
+= 3 * G(n+1) + 2 * (F(m+1) + G(n)) 
 
-= 4 * G(n+1) + G(n)   :QED
+= 3 * G(n+1) + 2 * G(n) + 2 * (G(n+1) - G(n))/2 = 4 * G(n+1) + G(n)   :QED
 
 Now, the sum of this sequence is another sequence, which can also be found at oeis.org:
 
