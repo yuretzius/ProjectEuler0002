@@ -24,7 +24,7 @@ But to improve on this, first, we notice, that due to the properties of the Fibo
 
 0, 2, 8, 34, 144...
 
-Checking in the oeis.org database we can find that for this sequence G(n+2) = 4*G(n+1) + G(n),
+Checking [in the oeis.org database we can find](https://oeis.org/A014445) that for this sequence G(n+2) = 4*G(n+1) + G(n),
 which can also be proven directly:
 
 G(n) = F(m)
@@ -34,7 +34,7 @@ G(n+2) = F(m+6) = G(n+1) + 2 * F(m+4) = G(n+1) + 2 * (F(m+3) + F(m+2)) = G(n+1) 
 
 = 3 * G(n+1) + 2 * G(n) + 2 * (G(n+1) - G(n))/2 = 4 * G(n+1) + G(n)   :QED
 
-Now, the sum of this sequence is another sequence, which can also be found at oeis.org:
+Now, the sum of this sequence is another sequence, [which can also be found at oeis.org](https://oeis.org/A099919):
 
 0, 2, 10, 44, 188, 798, ...
 
